@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="162">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="163">
  <imagelayer id="3" name="Background" offsetx="6" offsety="0">
   <image source="../images/background_map.png" width="2048" height="2469"/>
  </imagelayer>
@@ -26,21 +26,21 @@
   <object id="41" name="Wall" x="1926" y="1586" width="20" height="600"/>
   <object id="42" name="Wall" x="1484" y="2174" width="462" height="20"/>
   <object id="43" name="Wall" x="1482" y="1526" width="20" height="254"/>
-  <object id="44" name="Wall" x="1480" y="1926" width="20" height="402"/>
+  <object id="44" name="Wall" x="1480" y="2032.06" width="20" height="295.939"/>
   <object id="51" name="Wall" x="934" y="1018" width="362" height="20"/>
   <object id="52" name="Wall" x="806" y="1220" width="20" height="248"/>
   <object id="53" name="Wall" x="1410" y="1206" width="20" height="256"/>
   <object id="54" name="Wall" x="706" y="1766" width="290" height="20"/>
-  <object id="105" x="452" y="110" width="24" height="150"/>
+  <object id="105" name="wall" x="452" y="110" width="24" height="150"/>
   <object id="107" x="458" y="374" width="18" height="470"/>
-  <object id="109" x="166" y="594" width="176" height="26"/>
-  <object id="112" x="676" y="132" width="16" height="112"/>
+  <object id="109" name="wall" x="166" y="594" width="176" height="26"/>
+  <object id="112" x="676" y="119.879" width="16" height="124.121"/>
   <object id="113" x="680" y="390" width="20" height="464"/>
   <object id="114" x="816" y="598" width="124" height="20"/>
   <object id="115" x="924" y="108" width="24" height="944"/>
   <object id="116" x="162" y="1012" width="310" height="28"/>
-  <object id="117" x="458" y="926" width="16" height="176"/>
-  <object id="123" x="682" y="946" width="12" height="158"/>
+  <object id="117" x="458" y="971.455" width="16" height="130.545"/>
+  <object id="123" x="682" y="979.333" width="12" height="124.667"/>
   <object id="124" x="706" y="1012" width="216" height="26"/>
   <object id="125" x="246" y="1190" width="130" height="12"/>
   <object id="126" x="232" y="1198" width="22" height="282"/>
@@ -75,22 +75,23 @@
  <objectgroup id="3" name="objects">
   <object id="60" name="player" x="546.97" y="228.788" width="64" height="64"/>
   <object id="61" name="exit" x="1563.64" y="150" width="100" height="100"/>
-  <object id="71" name="monster" x="225.758" y="186.364" width="64" height="64"/>
+  <object id="71" name="monster" x="280.303" y="301.516" width="64" height="64"/>
   <object id="72" name="monster" x="337.879" y="884.848" width="64" height="64"/>
-  <object id="73" name="monster" x="825.758" y="189.394" width="64" height="64"/>
-  <object id="74" name="monster" x="698.485" y="1278.79" width="64" height="64"/>
-  <object id="75" name="monster" x="1400" y="250" width="64" height="64"/>
-  <object id="76" name="monster" x="1363.64" y="833.333" width="64" height="64"/>
-  <object id="77" name="monster" x="1812.12" y="259.091" width="64" height="64"/>
-  <object id="78" name="monster" x="1809.09" y="872.727" width="64" height="64"/>
-  <object id="79" name="monster" x="793.697" y="903.03" width="64" height="64"/>
-  <object id="80" name="monster" x="1093.7" y="1333.33" width="64" height="64"/>
+  <object id="73" name="monster" x="783.334" y="280.303" width="64" height="64"/>
+  <object id="74" name="monster" x="668.182" y="1278.79" width="64" height="64"/>
+  <object id="75" name="monster" x="1390.91" y="307.576" width="64" height="64"/>
+  <object id="76" name="monster" x="1375.76" y="760.606" width="64" height="64"/>
+  <object id="77" name="monster" x="1787.88" y="301.515" width="64" height="64"/>
+  <object id="78" name="monster" x="1778.79" y="775.757" width="64" height="64"/>
+  <object id="79" name="monster" x="730.061" y="866.666" width="64" height="64"/>
+  <object id="80" name="monster" x="1093.7" y="1512.12" width="64" height="64"/>
+  <object id="162" name="monster" x="1096.73" y="2103.03" width="64" height="64"/>
   <object id="81" name="monster" x="351.515" y="1821.21" width="64" height="64"/>
-  <object id="82" name="monster" x="1706.06" y="1325.76" width="64" height="64"/>
-  <object id="83" name="monster" x="1775.76" y="2012.12" width="64" height="64"/>
+  <object id="82" name="monster" x="1684.85" y="1350" width="64" height="64"/>
+  <object id="83" name="monster" x="1666.67" y="1939.39" width="64" height="64"/>
   <object id="66" name="battery" x="292.424" y="1354.3" width="32" height="32"/>
   <object id="67" name="battery" x="1834.85" y="1354.3" width="32" height="32"/>
   <object id="68" name="battery" x="1343.94" y="2277.27" width="32" height="32"/>
-  <object id="69" name="medkit" x="660.606" y="1622.73" width="32" height="32"/>
+  <object id="69" name="medkit" x="1848.48" y="1919.7" width="32" height="32"/>
  </objectgroup>
 </map>

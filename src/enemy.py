@@ -7,8 +7,23 @@ class ShadowWalker(pygame.sprite.Sprite):
         self.groups = game.all_sprites, game.enemies
         pygame.sprite.Sprite.__init__(self, self.groups)
         self.game = game
-        self.image = pygame.Surface((TILESIZE, TILESIZE))
-        self.image.fill((150, 0, 0)) # Dark red color
+        
+        # Load the custom monster sprite sheet
+        try:
+            full_sheet = pygame.image.load('assets/images/monster.png').convert_alpha()
+            # Remove white boundaries/backgrounds
+            full_sheet.set_colorkey((255, 255, 255))
+            
+            # The monster image is roughly 416x206 with 5 cols and 2 rows.
+            # We crop the top-left frame (Idle Down) which is approx 83x103.
+            frame = pygame.Surface((83, 103), pygame.SRCALPHA)
+            frame.blit(full_sheet, (0, 0), (0, 0, 83, 103))
+            self.image = pygame.transform.scale(frame, (TILESIZE, TILESIZE))
+            self.image.set_colorkey((255, 255, 255))
+        except Exception:
+            self.image = pygame.Surface((TILESIZE, TILESIZE))
+            self.image.fill((150, 0, 0)) # Dark red color
+            
         self.rect = self.image.get_rect()
         self.pos = pygame.math.Vector2(x, y)
         self.rect.center = self.pos

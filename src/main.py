@@ -14,7 +14,7 @@ class Game:
     def __init__(self):
         # Initialize pygame and create the window
         pygame.init()
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
+        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN | pygame.SCALED)
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
         self.running = True
@@ -35,6 +35,9 @@ class Game:
         self.enemies = pygame.sprite.Group()
         self.items = pygame.sprite.Group()
         self.exits = pygame.sprite.Group()
+        
+        self.start_time = pygame.time.get_ticks()
+        self.completion_time = 0.0
         
         # Map setup
         self.map = TiledMap('assets/maps/map.tmx')
@@ -127,6 +130,7 @@ class Game:
             # Check Win condition
             if pygame.sprite.spritecollideany(self.player, self.exits):
                 self.state = "VICTORY"
+                self.completion_time = (pygame.time.get_ticks() - self.start_time) / 1000.0
                 
             # Check Lose condition
             if self.player.health <= 0 or self.flashlight.battery <= 0:
@@ -171,10 +175,15 @@ class Game:
         elif self.state == "VICTORY":
             font = pygame.font.SysFont(None, 72)
             text = font.render('YOU ESCAPED!', True, GREEN)
-            self.screen.blit(text, (WIDTH//2 - text.get_width()//2, HEIGHT//2 - text.get_height()//2))
+            self.screen.blit(text, (WIDTH//2 - text.get_width()//2, HEIGHT//2 - text.get_height()//2 - 30))
+            
+            font_medium = pygame.font.SysFont(None, 48)
+            time_text = font_medium.render(f'Time: {self.completion_time:.2f} seconds', True, (200, 200, 255))
+            self.screen.blit(time_text, (WIDTH//2 - time_text.get_width()//2, HEIGHT//2 + 20))
+            
             font_small = pygame.font.SysFont(None, 36)
             text_small = font_small.render('Press R to Play Again', True, WHITE)
-            self.screen.blit(text_small, (WIDTH//2 - text_small.get_width()//2, HEIGHT//2 + 50))
+            self.screen.blit(text_small, (WIDTH//2 - text_small.get_width()//2, HEIGHT//2 + 80))
 
         pygame.display.flip()
 

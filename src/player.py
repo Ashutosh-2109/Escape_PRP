@@ -5,9 +5,23 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, game, x, y):
         super().__init__()
         self.game = game
-        # Temporary placeholder for the player image
-        self.image = pygame.Surface((TILESIZE, TILESIZE))
-        self.image.fill(GREEN)
+        
+        # Load the custom player sprite sheet
+        try:
+            full_sheet = pygame.image.load('assets/images/player.png').convert_alpha()
+            # Remove white boundaries/backgrounds
+            full_sheet.set_colorkey((255, 255, 255))
+            
+            # The player image is roughly 757x337 with 10 cols and 4 rows.
+            # We crop the top-left frame (Idle Down) which is approx 75x84.
+            frame = pygame.Surface((75, 84), pygame.SRCALPHA)
+            frame.blit(full_sheet, (0, 0), (0, 0, 75, 84))
+            self.image = pygame.transform.scale(frame, (TILESIZE, TILESIZE))
+            self.image.set_colorkey((255, 255, 255)) # Double ensure no white border
+        except Exception:
+            self.image = pygame.Surface((TILESIZE, TILESIZE))
+            self.image.fill(GREEN)
+            
         self.rect = self.image.get_rect()
         
         # Health System
