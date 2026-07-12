@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="162">
+ <imagelayer id="3" name="Background" offsetx="6" offsety="0">
+  <image source="../images/background_map.png" width="2048" height="2469"/>
+ </imagelayer>
+ <objectgroup id="2" name="obstacles">
+  <object id="1" name="Wall" x="0" y="0" width="2048" height="32"/>
+  <object id="2" name="Wall" x="0" y="0" width="32" height="2048"/>
+  <object id="3" name="Wall" x="732" y="2332" width="764" height="32"/>
+  <object id="4" name="Wall" x="2016" y="0" width="32" height="2048"/>
+  <object id="10" name="Wall" x="150" y="100" width="20" height="944"/>
+  <object id="11" name="Wall" x="150" y="100" width="782" height="20"/>
+  <object id="17" name="Wall" x="1290" y="104" width="20" height="926"/>
+  <object id="18" name="Wall" x="1300" y="100" width="620" height="20"/>
+  <object id="19" name="Wall" x="1928" y="100" width="20" height="938"/>
+  <object id="20" name="Wall" x="1512" y="100" width="20" height="190"/>
+  <object id="21" name="Wall" x="1510" y="492" width="20" height="302"/>
+  <object id="22" name="Wall" x="1680" y="100" width="20" height="172"/>
+  <object id="23" name="Wall" x="1688" y="494" width="20" height="298"/>
+  <object id="30" name="Wall" x="198" y="1600" width="236" height="20"/>
+  <object id="31" name="Wall" x="202" y="1608" width="20" height="546"/>
+  <object id="32" name="Wall" x="200" y="2128" width="524" height="20"/>
+  <object id="33" name="Wall" x="710" y="1502" width="20" height="266"/>
+  <object id="34" name="Wall" x="710" y="2000" width="20" height="368"/>
+  <object id="40" name="Wall" x="1896" y="1190" width="26" height="280"/>
+  <object id="41" name="Wall" x="1926" y="1586" width="20" height="600"/>
+  <object id="42" name="Wall" x="1484" y="2174" width="462" height="20"/>
+  <object id="43" name="Wall" x="1482" y="1526" width="20" height="254"/>
+  <object id="44" name="Wall" x="1480" y="1926" width="20" height="402"/>
+  <object id="51" name="Wall" x="934" y="1018" width="362" height="20"/>
+  <object id="52" name="Wall" x="806" y="1220" width="20" height="248"/>
+  <object id="53" name="Wall" x="1410" y="1206" width="20" height="256"/>
+  <object id="54" name="Wall" x="706" y="1766" width="290" height="20"/>
+  <object id="105" x="452" y="110" width="24" height="150"/>
+  <object id="107" x="458" y="374" width="18" height="470"/>
+  <object id="109" x="166" y="594" width="176" height="26"/>
+  <object id="112" x="676" y="132" width="16" height="112"/>
+  <object id="113" x="680" y="390" width="20" height="464"/>
+  <object id="114" x="816" y="598" width="124" height="20"/>
+  <object id="115" x="924" y="108" width="24" height="944"/>
+  <object id="116" x="162" y="1012" width="310" height="28"/>
+  <object id="117" x="458" y="926" width="16" height="176"/>
+  <object id="123" x="682" y="946" width="12" height="158"/>
+  <object id="124" x="706" y="1012" width="216" height="26"/>
+  <object id="125" x="246" y="1190" width="130" height="12"/>
+  <object id="126" x="232" y="1198" width="22" height="282"/>
+  <object id="127" x="230" y="1442" width="192" height="30"/>
+  <object id="128" x="408" y="1446" width="22" height="160"/>
+  <object id="130" x="710" y="1472" width="120" height="26"/>
+  <object id="135" x="1228" y="1614" width="20" height="178"/>
+  <object id="136" x="980" y="1614" width="16" height="160"/>
+  <object id="137" x="1234" y="1766" width="266" height="24"/>
+  <object id="140" x="1706" y="1458" width="22" height="166"/>
+  <object id="141" x="1706" y="1592" width="224" height="26"/>
+  <object id="142" x="1716" y="1452" width="206" height="28"/>
+  <object id="143" x="1778" y="1172" width="132" height="30"/>
+  <object id="144" x="1700" y="1018" width="240" height="24"/>
+  <object id="145" x="1678" y="906" width="18" height="198"/>
+  <object id="146" x="1516" y="908" width="14" height="202"/>
+  <object id="147" x="1290" y="1014" width="234" height="26"/>
+  <object id="150" x="956" y="1038" width="16" height="230.024" rotation="45"/>
+  <object id="158" x="1524" y="1102" width="16" height="156.485" rotation="45"/>
+  <object id="154" x="1422" y="1448" width="16" height="261.137" rotation="45"/>
+  <object id="152" x="462" y="1100" width="16" height="136.686" rotation="45"/>
+  <object id="151" x="676" y="1100" width="16" height="194.669" rotation="-45"/>
+  <object id="155" x="676" y="1100" width="16" height="194.669" rotation="-45"/>
+  <object id="157" x="1250" y="1044" width="16" height="248.409" rotation="-45"/>
+  <object id="159" x="1682" y="1110" width="16" height="135.272" rotation="-45"/>
+  <object id="156" x="1416" y="1470" width="16" height="101.331" rotation="-45"/>
+  <object id="153" x="822" y="1486" width="16" height="214.468" rotation="-45"/>
+  <object id="160" x="1294" y="600" width="132" height="26"/>
+  <object id="161" x="1794" y="602" width="142" height="24"/>
+ </objectgroup>
+ <group id="4" visible="0"/>
+ <objectgroup id="3" name="objects">
+  <object id="60" name="player" x="546.97" y="228.788" width="64" height="64"/>
+  <object id="61" name="exit" x="1563.64" y="150" width="100" height="100"/>
+  <object id="71" name="monster" x="225.758" y="186.364" width="64" height="64"/>
+  <object id="72" name="monster" x="337.879" y="884.848" width="64" height="64"/>
+  <object id="73" name="monster" x="825.758" y="189.394" width="64" height="64"/>
+  <object id="74" name="monster" x="698.485" y="1278.79" width="64" height="64"/>
+  <object id="75" name="monster" x="1400" y="250" width="64" height="64"/>
+  <object id="76" name="monster" x="1363.64" y="833.333" width="64" height="64"/>
+  <object id="77" name="monster" x="1812.12" y="259.091" width="64" height="64"/>
+  <object id="78" name="monster" x="1809.09" y="872.727" width="64" height="64"/>
+  <object id="79" name="monster" x="793.697" y="903.03" width="64" height="64"/>
+  <object id="80" name="monster" x="1093.7" y="1333.33" width="64" height="64"/>
+  <object id="81" name="monster" x="351.515" y="1821.21" width="64" height="64"/>
+  <object id="82" name="monster" x="1706.06" y="1325.76" width="64" height="64"/>
+  <object id="83" name="monster" x="1775.76" y="2012.12" width="64" height="64"/>
+  <object id="66" name="battery" x="292.424" y="1354.3" width="32" height="32"/>
+  <object id="67" name="battery" x="1834.85" y="1354.3" width="32" height="32"/>
+  <object id="68" name="battery" x="1343.94" y="2277.27" width="32" height="32"/>
+  <object id="69" name="medkit" x="660.606" y="1622.73" width="32" height="32"/>
+ </objectgroup>
+</map>
