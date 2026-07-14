@@ -12,10 +12,11 @@ class Player(pygame.sprite.Sprite):
             # Remove white boundaries/backgrounds
             full_sheet.set_colorkey((255, 255, 255))
             
-            # The player image is roughly 757x337 with 10 cols and 4 rows.
-            # We crop the top-left frame (Idle Down) which is approx 75x84.
-            frame = pygame.Surface((75, 84), pygame.SRCALPHA)
-            frame.blit(full_sheet, (0, 0), (0, 0, 75, 84))
+            # Dynamically calculate frame size (4 cols, 4 rows)
+            w = full_sheet.get_width() // 4
+            h = full_sheet.get_height() // 4
+            frame = pygame.Surface((w, h), pygame.SRCALPHA)
+            frame.blit(full_sheet, (0, 0), (0, 0, w, h))
             self.image = pygame.transform.scale(frame, (TILESIZE, TILESIZE))
             self.image.set_colorkey((255, 255, 255)) # Double ensure no white border
         except Exception:

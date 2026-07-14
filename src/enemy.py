@@ -14,10 +14,11 @@ class ShadowWalker(pygame.sprite.Sprite):
             # Remove white boundaries/backgrounds
             full_sheet.set_colorkey((255, 255, 255))
             
-            # The monster image is roughly 416x206 with 5 cols and 2 rows.
-            # We crop the top-left frame (Idle Down) which is approx 83x103.
-            frame = pygame.Surface((83, 103), pygame.SRCALPHA)
-            frame.blit(full_sheet, (0, 0), (0, 0, 83, 103))
+            # Dynamically calculate frame size (4 cols, 4 rows)
+            w = full_sheet.get_width() // 4
+            h = full_sheet.get_height() // 4
+            frame = pygame.Surface((w, h), pygame.SRCALPHA)
+            frame.blit(full_sheet, (0, 0), (0, 0, w, h))
             self.image = pygame.transform.scale(frame, (TILESIZE, TILESIZE))
             self.image.set_colorkey((255, 255, 255))
         except Exception:
@@ -94,6 +95,7 @@ class ShadowWalker(pygame.sprite.Sprite):
             current_time = pygame.time.get_ticks() / 1000.0
             if current_time - self.last_attack_time > self.attack_cooldown:
                 self.game.player.health -= self.attack_damage
+                self.game.damage_overlay_alpha = 150 # Trigger blood effect
                 self.last_attack_time = current_time
             
             # If player moves away, go back to chase

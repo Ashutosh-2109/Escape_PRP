@@ -8,7 +8,7 @@ class Flashlight:
         self.game = game
         self.active = True
         self.battery = 100.0
-        self.drain_rate = 100.0 / 25.0 # Exactly 25 seconds of battery life
+        self.drain_rate = 100.0 / 35.0 # Exactly 35 seconds of battery life
         self.radius = 450
         self.angle_spread = math.radians(50) # 50 degrees spread
         
